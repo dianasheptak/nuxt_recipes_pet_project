@@ -1,4 +1,4 @@
-export interface Recipes {
+export interface RecipeResponse {
     recipes: Recipe[];
     total: number;
     skip: number;

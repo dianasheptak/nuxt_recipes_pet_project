@@ -49,13 +49,12 @@
                 <span>{{ recipe.rating }} ({{ recipe.reviewCount }})</span>
               </div>
             </div>
-            <UButton
-                :ui="{
-                base: 'self-start',
-                }"
+            <NuxtLink
                 :to="`/recipes/${recipe.id}`"
-                label="View"
-            />
+                class="px-4 py-2 text-white self-start bg-dodgeroll-700 bg-[#f1820f] rounded-md text-base lg:text-lg"
+            >
+              View
+            </NuxtLink>
           </div>
         </div>
       </div>

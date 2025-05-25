@@ -17,6 +17,10 @@ export default defineNuxtConfig({
     },
   },
 
+  site: {
+    name: "Nuxt Recipes"
+  },
+
   image: {
     domains: ["https://cdn.dummyjson.com"],
   },
@@ -51,6 +55,10 @@ export default defineNuxtConfig({
     redirectOptions: {
       include: ["/admin"],
     },
+  },
+
+  sitemap: {
+    sources: ["/api/__sitemap__/urls"]
   },
 
   runtimeConfig: {

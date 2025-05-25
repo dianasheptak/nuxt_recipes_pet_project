@@ -24,7 +24,7 @@
     <section id="recipes" class="py-20 container">
       <h2 class="text-3xl lg:text-5xl mb-2">Discover, Create, Share</h2>
       <p class="text-lg lg:text-xl mb-8">Check out our most popular recipes!</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
+      <div v-if="!error" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
         <div v-for="recipe in data" class="flex flex-col shadow rounded-md">
           <NuxtImg :src="recipe.image" alt="" class="rounded-t-md" />
           <div class="flex flex-col py-6 px-4 flex-1">
@@ -58,6 +58,7 @@
           </div>
         </div>
       </div>
+      <p class="text-xl" v-else>Something went wrong...</p>
     </section>
     </main>
 </template>
@@ -83,4 +84,17 @@ const loadRecipes = async () => {
 onMounted( () => {
   loadRecipes();
 })
+
+useSeoMeta({
+  title: "Nuxtcipes",
+  description: "Recipes for you to cook!",
+  ogTitle: "Nuxtcipes",
+  ogDescription: "Recipes for you to cook!",
+  ogImage: "/nuxt-course-hero.png",
+  ogUrl: `http:localhost:3000`,
+  twitterTitle: "Nuxtcipes",
+  twitterDescription: "Recipes for you to cook!",
+  twitterImage: "/nuxt-course-hero.png",
+  twitterCard: "summary",
+});
 </script>

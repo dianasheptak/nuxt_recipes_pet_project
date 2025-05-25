@@ -33,7 +33,13 @@ export default defineNuxtConfig({
     preference: "light",
   },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@nuxt/image"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/google-fonts",
+    "@nuxt/image",
+    "@nuxtjs/robots",
+    "@nuxtjs/sitemap",
+  ],
 
   googleFonts: {
     families: {
